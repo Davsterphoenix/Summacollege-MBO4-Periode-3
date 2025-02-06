@@ -1,0 +1,85 @@
+﻿<Window
+    Background="DarkGray"
+    Height="450"
+    Title="MainWindow"
+    Width="800"
+    mc:Ignorable="d"
+    x:Class="Start_Periode_Opdracht.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Start_Periode_Opdracht"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <ListBox
+            Grid.Column="0"
+            Grid.Row="1"
+            MouseDoubleClick="ListBoxUserView_OnMouseDoubleClick"
+            MouseDown="Selected_Tile"
+            Width="200"
+            x:Name="ListBoxUserView" />
+        <StackPanel Grid.Row="2" Width="200">
+
+            <Button
+                Click="Delete_Button_Click"
+                Content="Gebruiker Verwijderen"
+                Height="25"
+                x:Name="VerwijderKnop" />
+            <Button
+                Click="SaveToFileButton_OnClick"
+                Content="Opslaan Naar Bestand"
+                Height="25"
+                x:Name="Save" />
+            <Button
+                Click="Load_OnClick"
+                Content="Bestand Ophalen"
+                Height="25"
+                x:Name="Load" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBox
+                FontWeight="Bold"
+                Height="25"
+                Text="Voornaam"
+                x:Name="NieuweVoornaam" />
+            <TextBox
+                FontWeight="Bold"
+                Height="25"
+                Text="Achternaam"
+                x:Name="NieuweAchternaam" />
+            <TextBox
+                FontWeight="Bold"
+                Height="25"
+                Text="Leeftijd"
+                x:Name="NieuweLeeftijd" />
+            <TextBox
+                FontWeight="Bold"
+                Height="25"
+                Text="Lengte"
+                x:Name="NieuweLengte" />
+            <TextBox
+                FontWeight="Bold"
+                Height="25"
+                Text="Gewicht"
+                x:Name="NieuweGewicht" />
+
+        </StackPanel>
+        <Button
+            Click="NieuweGebruiker_Button"
+            Content="Gebruiker Toevoegen"
+            Grid.Column="1"
+            Grid.Row="2"
+            Height="50"
+            x:Name="ToevoegKnop" />
+    </Grid>
+</Window>

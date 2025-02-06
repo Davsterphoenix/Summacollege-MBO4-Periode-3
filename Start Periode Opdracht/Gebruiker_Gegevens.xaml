@@ -1,0 +1,21 @@
+﻿<Window
+    Background="Azure"
+    Height="150"
+    ResizeMode="NoResize"
+    Title="Gebruiker_Gegevens"
+    Width="400"
+    mc:Ignorable="d"
+    x:Class="Start_Periode_Opdracht.Gebruiker_Gegevens"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Start_Periode_Opdracht"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="White">
+        <StackPanel>
+            <Label Content="Gebruikersnaam: " x:Name="Gebruikersnaam_Label" />
+            <Label Content="Leeftijd: " x:Name="Leeftijd_Label" />
+            <Label Content="Lengte: " x:Name="Lengte_Label" />
+        </StackPanel>
+    </Grid>
+</Window>
